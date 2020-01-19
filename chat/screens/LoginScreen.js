@@ -121,7 +121,7 @@ export default class LoginScreen extends React.Component {
             </View>
             <TouchableOpacity onPress={this.register}>
               <Text
-                style={[styles.header_below, {fontSize: 17, marginTop: 40}]}>
+                style={[styles.header_below, {fontSize: 17, marginTop: 40, marginBottom: 100}]}>
                 Don’t have a account?
               </Text>
             </TouchableOpacity>

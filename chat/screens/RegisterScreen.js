@@ -73,7 +73,7 @@ export default class LoginScreen extends React.Component {
               </View>
             </TouchableOpacity>
            
-            <View style={{flexDirection: 'row', marginTop: 20}}>
+            <View style={{flexDirection: 'row', marginTop: 40, marginBottom: 100}}>
                 <Text
                   style={[styles.header_below, {fontSize: 14, marginTop: 40}]}>
                   Already have an account? 
