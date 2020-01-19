@@ -20,8 +20,8 @@ export default class LoginScreen extends React.Component {
     this.props.navigation.navigate('Chat');
   };
 
-  register = () => {
-    this.props.navigation.navigate('Register');
+  login = () => {
+    this.props.navigation.navigate('Login');
   };
 
   render() {
@@ -35,9 +35,7 @@ export default class LoginScreen extends React.Component {
           <View>
             <Text style={styles.header}>UOA</Text>
             <Text style={styles.header3}>CAMPUS</Text>
-            <Text style={[styles.header_below, {marginTop: -11}]}>
-              Charity Never be this easy
-            </Text>
+            
           </View>
           <View style={styles.mediaImageContainer}>
             <Image
@@ -45,9 +43,16 @@ export default class LoginScreen extends React.Component {
               style={styles.image}
             />
           </View>
-          <Text style={styles.header_above}>Sign In</Text>
+          <Text style={styles.header_above}>Hello</Text>
+          <Text style={[styles.header_below, {marginTop: -11}]}>
+              Create an account to continue
+            </Text>
           <TextInput
             style={[styles.input, {marginTop: 10}]}
+            placeholder="Full name"
+          />
+          <TextInput
+            style={styles.input}
             placeholder="Email"
           />
           <TextInput
@@ -56,75 +61,30 @@ export default class LoginScreen extends React.Component {
             secureTextEntry={true}
           />
           <View style={{alignItems: 'center', marginTop: 24}}>
-            <TouchableOpacity style={styles.continue} onPress={this.continue}>
+            <TouchableOpacity style={styles.continue} onPress={this.login}>
               <View style={styles.btn}>
                 <Text
                   style={[
                     styles.fontStyle,
                     {alignSelf: 'center', fontSize: 16, color: '#fff'},
                   ]}>
-                  Login
+                  Register
                 </Text>
               </View>
             </TouchableOpacity>
-            <Text
-              style={[
-                styles.header_above,
-                {fontSize: 16, color: '#A1A1A1', marginTop: 30},
-              ]}>
-              Or
-            </Text>
-            <Text style={[styles.header_above, {fontSize: 20}]}>
-              Sign in with
-            </Text>
+           
             <View style={{flexDirection: 'row', marginTop: 20}}>
-              <View
-                style={{
-                  marginHorizontal: 20,
-                  backgroundColor: '#fff',
-                  width: 70,
-                  height: 70,
-                  borderRadius: 50,
-                  elevation: 12,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <TouchableOpacity>
-                  <Image
-                    source={require('../src/images/google.png')}
-                    style={([styles.image], {height: 30, width: 30})}
-                  />
-                </TouchableOpacity>
-              </View>
-              <View
-                style={{
-                  marginHorizontal: 20,
-                  backgroundColor: '#6475A5',
-                  width: 70,
-                  height: 70,
-                  borderRadius: 50,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <TouchableOpacity>
-                  <Text
-                    style={{
-                      fontFamily: 'Poppins-Bold',
-                      fontSize: 22,
-                      color: '#fff',
-          
-                    }}>
-                    f
-                  </Text>
-                </TouchableOpacity>
-              </View>
+                <Text
+                  style={[styles.header_below, {fontSize: 14, marginTop: 40}]}>
+                  Already have an account? 
+                </Text>
+              <TouchableOpacity onPress={this.login}>
+                <Text
+                  style={[styles.header_below, {fontSize: 14, marginTop: 40,marginLeft: 10, color: '#423c9F'}]}>
+                     Sign In
+                </Text>
+              </TouchableOpacity>
             </View>
-            <TouchableOpacity onPress={this.register}>
-              <Text
-                style={[styles.header_below, {fontSize: 17, marginTop: 40}]}>
-                Don’t have a account?
-              </Text>
-            </TouchableOpacity>
           </View>
         </View>
       </View>
